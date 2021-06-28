@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     var { isLoaded, items } = this.state;
     if (!isLoaded) {
-      return <div>Loading</div>;
+      return <div>Loading....👀👀👀👀👀</div>;
     } else {
       return (
         <div className="hero-container">
@@ -48,7 +48,7 @@ class App extends Component {
                 <th>Center Name</th>
                 <th>Vaccination District</th>
                 <th>Vaccination Address</th>
-                <th>Vaccine</th>
+                <th>Vaccine Avaiable</th>
               </tr>
             </thead>
             <tbody>
@@ -57,7 +57,7 @@ class App extends Component {
                   <td key={item.session_id}>{item.name}</td>
                   <td key={item.session_id}>{item.district_name}</td>
                   <td key={item.session_id}>{item.address}</td>
-                  <td key={item.session_id}>{item.vaccine}</td>
+                  <td key={item.session_id}>{item.available_capacity}</td>
                 </tr>
               ))}
             </tbody>
