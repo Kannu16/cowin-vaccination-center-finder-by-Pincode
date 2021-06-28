@@ -1,4 +1,4 @@
-In the project directory, you can run:
+In your project directory simply paste src files index.css,index.js,app.jsx, you can run:
 
 ### `npm start`
 
