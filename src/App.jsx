@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     var { isLoaded, items } = this.state;
     if (!isLoaded) {
-      return <div>Loading.....👀👀👀</div>;
+      return <div className="loading">Loading.....👀👀👀</div>;
     } else {
       return (
         <div className="hero-container">
