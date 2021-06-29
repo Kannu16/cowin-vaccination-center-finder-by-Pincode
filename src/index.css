@@ -5,7 +5,7 @@
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
 }
-.hero-container{
+.hero-container,.loading{
   width: 60%;
   height:100%;
   position: absolute;
