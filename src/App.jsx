@@ -1,9 +1,17 @@
 import React, { Component } from "react";
+let pinCode = "788710";
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1;
 
-let pinCode = '788710';
-
-let date = "29-06-2021";
-
+var yyyy = today.getFullYear();
+if (dd < 10) {
+  dd = "0" + dd;
+}
+if (mm < 10) {
+  mm = "0" + mm;
+}
+var currDay = dd + "-" + mm + "-" + yyyy;
 class App extends Component {
   constructor(props) {
     super(props);
@@ -12,9 +20,10 @@ class App extends Component {
       isLoaded: false,
     };
   }
- componentDidMount() {
-  fetch(
-      `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pinCode}&date=${date}`)
+  componentDidMount() {
+    fetch(
+      `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pinCode}&date=${currDay}`
+    )
       .then((res) => res.json())
       .then((json) => {
         this.setState({
@@ -27,7 +36,7 @@ class App extends Component {
   render() {
     var { isLoaded, items } = this.state;
     if (!isLoaded) {
-      return <div>Loading....👀👀👀👀👀</div>;
+      return <div>Loading.....👀👀👀</div>;
     } else {
       return (
         <div className="hero-container">
@@ -48,7 +57,7 @@ class App extends Component {
                 <th>Center Name</th>
                 <th>Vaccination District</th>
                 <th>Vaccination Address</th>
-                <th>Vaccine Avaiable</th>
+                <th>Vaccine Available</th>
               </tr>
             </thead>
             <tbody>
