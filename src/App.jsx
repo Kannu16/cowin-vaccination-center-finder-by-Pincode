@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-let pinCode = prompt("Enter your Pin code To Know Your Vaccination Center");
+let pinCode = prompt("Enter your pincode to know your today's vaccination centre");
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth() + 1;
